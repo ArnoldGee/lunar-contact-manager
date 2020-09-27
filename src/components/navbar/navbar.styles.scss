@@ -1,0 +1,100 @@
+@import '../../global-styles.scss';
+
+/*******************************************************
+ * INDEX
+ * 1. Styles of the logo and title of the website
+ * 2. Styles of the animated, responsive hamburger menu
+********************************************************/
+
+
+// 1. LOGO AND TITLE STYLES
+
+.logo-container {
+  display: flex;
+  align-items: center;
+
+  .logo {
+    fill: white;
+    margin-right: 20px;
+    display: inline-block;
+    transition: transform 0.5s ease-out;
+  }
+
+  &:hover .logo {
+    transform: translate(80px, -80px)
+  }
+  .logo-title {
+    font-family: $title-font;
+    letter-spacing: 2px;
+  }
+}
+
+
+
+
+// 2. HAMBURGER MENU STYLES
+
+.nav {
+  /*you can style it with flexbox too! (instead of text-align:right;)*/
+  position: sticky;
+  height: 70px;
+  max-width: 1000px;
+  margin: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+  
+  line-height: 70px;
+  background-color: $navy;
+}
+.menu {
+  background-color: $navy;
+  text-align: right;
+}
+.menu a {
+  text-decoration: none;
+  margin: 0 10px;
+  line-height: 70px; /* it places the font in the center!*/
+}
+.nav-link {
+  font-size: 1.2rem;
+}
+.green {
+  color: $orange;
+}
+
+label {
+  font-size: 1.7rem;
+  cursor: pointer;
+  line-height: 70px;
+  display: none;
+}
+#toggle {
+  display: none;
+}
+@media only screen and (max-width: 500px) {
+  label {
+    display: block;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-out;
+  }
+  .menu {
+    text-align: center;
+    width: 100%;
+    height: 0%; /*first, its height is hidden and the text inside it is also hidden */
+    overflow: hidden;
+    transition: height 0.3s ease-out; /*cool animation*/
+  }
+  .menu a {
+    display: block;
+    margin: 0;
+  }
+  #toggle:checked ~ label{
+    transform: rotate(90deg);
+  }
+  #toggle:checked ~ .menu {
+    height: 300%;
+  }
+}
