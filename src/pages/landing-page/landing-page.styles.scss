@@ -3,14 +3,40 @@
   
   max-width: 1000px;
   margin: auto;
+  padding: 0 20px;
 
   .introduction {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: no-wrap;
     justify-content: space-between;
     align-items: center;
     min-height: 80vh;
+    .introduction-title-container {
+      margin: 50px 0;
+      h2 {
+        font-weight: 200;
+        font-size: 5rem;
+        margin-bottom: 1rem;
+        .logo {
+          fill: white;
+          height: 3rem;
+          width: 3rem;
+          margin-left: 1rem;
+          transform: translate(-60vh, 60vh,);
+          animation: rocket-fly 1s 0.5s ease-out forwards;
+        }
+      }
+      .button {
+        margin: 2rem 0 0 auto;
+        transform: translateX(0);
+        transition: transform 0.5s;
+        display: block;
+        &:hover {
+          transform: translateX(1rem);
+        }
+      }
+    }
     .introduction-picture {
       display: block;
       width: 60%;
@@ -21,14 +47,43 @@
 
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 700px) {
   .landing-page {
     .introduction {
-      justify-content: center ;
-      align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start ;
+      align-items: center;
+      .introduction-title-container {
+        text-align: center;
+        h2 {
+          font-weight: 200;
+          font-size: 3rem;
+          
+          .logo {
+            fill: white;
+            height: 2rem;
+            width: 2rem;
+            margin-left: 1rem;
+          }
+        }
+        .button {
+          margin: 2rem auto 0 auto;
+        }
+      }
       .introduction-picture {
         width: 90%;
       }
     }
+  }
+}
+
+@keyframes rocket-fly {
+  from {
+    
+    opacity: 0;
+  }
+  to {
+    transform: translate(0,0);
+    opacity: 1;
   }
 }

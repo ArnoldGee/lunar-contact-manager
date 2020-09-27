@@ -10,3 +10,12 @@ body {
   margin: 0;
   font-family: 'Barlow', sans-serif;
 }
+
+.button {
+  line-height: 3rem;
+  padding: 0 2rem;
+  background: transparent;
+  border: 2px solid $platinum;
+  border-radius: 2rem;
+  
+}
