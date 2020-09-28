@@ -9,6 +9,7 @@ body {
   color: white;
   margin: 0;
   font-family: 'Barlow', sans-serif;
+  box-sizing: border-box;
 }
 
 .button {
@@ -17,5 +18,9 @@ body {
   background: transparent;
   border: 2px solid $platinum;
   border-radius: 2rem;
-  
+  transition: all 0.5s;
+  &:hover {
+    background: $platinum;
+    color: $navy;
+  }
 }

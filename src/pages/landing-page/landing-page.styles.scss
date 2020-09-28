@@ -1,9 +1,14 @@
 @import '../../global-styles.scss';
-.landing-page {
-  
+section {
   max-width: 1000px;
   margin: auto;
   padding: 0 20px;
+}
+.landing-page {
+  
+  
+  
+  
 
   .introduction {
     display: flex;
@@ -29,22 +34,97 @@
       }
       .button {
         margin: 2rem 0 0 auto;
-        transform: translateX(0);
-        transition: transform 0.5s;
+        transform: translateY(0);
         display: block;
         &:hover {
-          transform: translateX(1rem);
+          transform: translateY(-0.3rem);
         }
       }
     }
     .introduction-picture {
       display: block;
-      width: 60%;
+      width: 110%;
       max-width: 700px;
       height: auto;
     }
   }
+}
 
+#pricing {
+  h2{
+    font-weight: 200;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .animated-svg {
+    height: auto;
+    width: 120px;
+    display: block;
+    margin: auto;
+    path {
+      fill: transparent;
+      stroke-width: 10;
+      stroke: $platinum;
+      stroke-dasharray: 400%;
+      stroke-dashoffset: 800%; /*Si vols que estiguin plenes, deixa-ho a 800%, si no, deixa-ho a 400%*/
+      transition: all 2.5s ease-out;
+      
+    }
+
+    // &:hover  path {
+    //   stroke-dashoffset: 0%;
+    //   animation: color-fill 0.8s 1.2s ease-out forwards;
+    // }
+  }
+  #gaming-svg path {
+    stroke-width: 0.8 !important;
+  }
+  
+  .pricing-plans-container {
+    
+    display: flex;
+    flex-wrap: no-wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+  }
+  .pricing-plans {
+    max-width: 300px;
+    margin: 2rem;
+    flex: 300px;
+    &:hover .animated-svg path {
+      stroke-dashoffset: 0%;
+      animation: color-fill 0.8s 1.2s ease-out forwards;
+    }
+
+    .pricing-plans-card {
+      margin-top: 2rem;
+      display: block;
+      width: 100%;
+      height: 65%;
+      padding: 1.5rem;
+      border-radius: 3rem;
+      background: $platinum;
+      * {
+        color: $navy;
+      }
+      h3 {
+        font-family: $title-font;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 200;
+      }
+      .price-tag{
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 300;
+        margin: 1rem;
+      }
+      
+    }
+  }
 }
 
 @media only screen and (max-width: 700px) {
@@ -74,6 +154,14 @@
         width: 90%;
       }
     }
+    #pricing {
+      h2 {
+        margin-top: 2rem;
+      }
+      .pricing-plans-container {
+        flex-wrap: wrap;
+      }
+    }
   }
 }
 
@@ -85,5 +173,14 @@
   to {
     transform: translate(0,0);
     opacity: 1;
+  }
+}
+
+@keyframes color-fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: $platinum;
   }
 }
