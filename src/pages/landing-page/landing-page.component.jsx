@@ -1,6 +1,17 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+
+// import particlesJS from 'particles.js'
+
+// import './particlesjs-config.json'
+
 import './landing-page.styles.scss'
 const LandingPage = () => {
+
+  // useEffect(() => {
+  //   particlesJS.load('particles-js', 'particlesjs-config.json', function() {
+  //     console.log('callback - particles.js config loaded');
+  //   });
+  // }, []);
   return (
     <div className="landing-page">
       <section className="introduction">
@@ -23,7 +34,7 @@ const LandingPage = () => {
         className="fade-up"   d="M661.70582,580.42c-2.45763,0-4.45757,2.28274-4.45757,5.0879s1.99994,5.08789,4.45757,5.08789h90.425c2.45764,0,4.45757-2.28274,4.45757-5.08789s-1.99993-5.0879-4.45757-5.0879Z" transform="translate(-148.95127 -78.96859)" fill="#fca311ff"/><path className="fade-up" d="M701.37683,258.59576H832.19035a5.457,5.457,0,0,1,5.45054,5.45054V400.28321a5.457,5.457,0,0,1-5.45054,5.45054H701.37683a5.457,5.457,0,0,1-5.45054-5.45054V264.0463A5.457,5.457,0,0,1,701.37683,258.59576Z" transform="translate(-148.95127 -78.96859)" fill="#fca311ff"/><path d="M804.31659,377.63922a3.70044,3.70044,0,1,0,0-7.40087h-75.066a3.70044,3.70044,0,1,0,0,7.40087Z" transform="translate(-148.95127 -78.96859)" fill="#242C3F"/><path d="M804.31659,355.83706a3.70044,3.70044,0,0,0,0-7.40088h-75.066a3.70044,3.70044,0,1,0,0,7.40088Z" transform="translate(-148.95127 -78.96859)" fill="#242C3F"/><path d="M766.78332,286.69029a23.29255,23.29255,0,1,1-23.29254,23.29254A23.31893,23.31893,0,0,1,766.78332,286.69029Z" transform="translate(-148.95127 -78.96859)" fill="#242C3F"/></svg>
       </section>
       <section id="pricing">
-        <h2>Pricing</h2>
+        <h2 className="regular-title">Pricing</h2>
         <div className="pricing-plans-container">
           <div className="pricing-plans">
             <svg className="animated-svg"  version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"  
@@ -36,7 +47,7 @@ const LandingPage = () => {
                   C123.333,485.371,187.62,512,256,512s132.667-26.629,181.02-74.981C485.372,388.667,512,324.38,512,256
                   C512,240.278,510.546,224.469,507.681,209.011z"/>
             </svg>
-            <div className="pricing-plans-card">
+            <div className="pricing-plans-card" data-aos="flip-up" data-aos-duration="700">
               <h3>Basic</h3>
               <p className="price-tag">0$</p>
               <p>Rediscover the joy of contact management</p>
@@ -44,7 +55,7 @@ const LandingPage = () => {
           </div>
           <div className="pricing-plans">
             <svg className="animated-svg" enableBackground="new 0 0 450 450"  viewBox="-100 -100 700 700"  xmlns="http://www.w3.org/2000/svg"><path data-aos="svg-trick" d="m130.239 138.268-44.358 3.427c-12.343.954-23.336 7.423-30.162 17.748l-51.157 77.372c-5.177 7.83-6 17.629-2.203 26.213 3.798 8.584 11.603 14.566 20.878 16.003l40.615 6.29c9.501-50.42 32.245-100.716 66.387-147.053z"/><path data-aos="svg-trick" d="m226.682 448.151 6.291 40.615c1.437 9.275 7.419 17.08 16.002 20.877 3.571 1.58 7.351 2.36 11.112 2.36 5.283 0 10.529-1.539 15.102-4.563l77.374-51.156c10.325-6.827 16.794-17.821 17.746-30.162l3.427-44.358c-46.338 34.143-96.633 56.887-147.054 66.387z"/><path data-aos="svg-trick" d="m211.407 420c1.41 0 2.828-.116 4.243-.352 21.124-3.532 41.484-9.482 60.906-17.27l-166.93-166.93c-7.788 19.421-13.738 39.781-17.27 60.906-1.392 8.327 1.401 16.81 7.37 22.78l93.144 93.144c4.956 4.955 11.645 7.722 18.537 7.722z"/><path data-aos="svg-trick" d="m471.178 227.003c40.849-78.974 42.362-162.43 40.227-201.57-.731-13.411-11.423-24.103-24.835-24.834-6.373-.348-13.926-.599-22.439-.599-43.766 0-113.017 6.629-179.131 40.826-52.542 27.177-121.439 87.018-162.087 165.66.48.375.949.773 1.391 1.215l180 180c.442.442.839.91 1.214 1.39 78.642-40.649 138.483-109.546 165.66-162.088zm-173.48-118.763c29.241-29.241 76.822-29.244 106.065 0 14.166 14.165 21.967 33 21.967 53.033s-7.801 38.868-21.967 53.033c-14.619 14.619-33.829 21.93-53.032 21.932-19.209.001-38.41-7.309-53.033-21.932-14.166-14.165-21.968-33-21.968-53.033s7.802-38.868 21.968-53.033z"/><path data-aos="svg-trick" d="m318.911 193.092c17.545 17.545 46.095 17.546 63.64 0 8.499-8.5 13.18-19.8 13.18-31.82s-4.681-23.32-13.18-31.819c-8.772-8.773-20.296-13.159-31.82-13.159-11.523 0-23.047 4.386-31.819 13.159-8.499 8.499-13.181 19.799-13.181 31.819s4.681 23.321 13.18 31.82z"/><path data-aos="svg-trick" d="m15.305 421.938c3.839 0 7.678-1.464 10.606-4.394l48.973-48.973c5.858-5.858 5.858-15.355 0-21.213-5.857-5.858-15.355-5.858-21.213 0l-48.973 48.973c-5.858 5.858-5.858 15.355 0 21.213 2.929 2.929 6.768 4.394 10.607 4.394z"/><path data-aos="svg-trick" d="m119.765 392.239c-5.857-5.858-15.355-5.858-21.213 0l-94.155 94.155c-5.858 5.858-5.858 15.355 0 21.213 2.929 2.929 6.768 4.393 10.607 4.393s7.678-1.464 10.606-4.394l94.154-94.154c5.859-5.858 5.859-15.355.001-21.213z"/><path data-aos="svg-trick" d="m143.432 437.12-48.972 48.973c-5.858 5.858-5.858 15.355 0 21.213 2.929 2.929 6.768 4.394 10.606 4.394s7.678-1.464 10.606-4.394l48.973-48.973c5.858-5.858 5.858-15.355 0-21.213-5.857-5.858-15.355-5.858-21.213 0z"/></svg>
-            <div className="pricing-plans-card">
+            <div className="pricing-plans-card" data-aos="flip-up" data-aos-duration="700" data-aos-delay="200">
               <h3>Premium</h3>
               <p className="price-tag">0$</p>
               <p>For our most experienced networkers. If you're the next Keith Ferrazzi, we've got you covered.</p>
@@ -53,12 +64,19 @@ const LandingPage = () => {
           
           <div className="pricing-plans">
             <svg className="animated-svg"  id="gaming-svg" height="512" viewBox="0 0 70 70" width="512" xmlns="http://www.w3.org/2000/svg"><g id="game_controller-video_game_controller-controller-monitor-hands" data-name="game controller-video game controller-controller-monitor-hands"><path data-aos="svg-trick" d="m20 28h1.38l-1.38-2.76z"/><path data-aos="svg-trick" d="m10 28v-2.76l-1.38 2.76z"/><path data-aos="svg-trick" d="m32 8.25-2.6 1.95a1.014 1.014 0 0 0 -.4.8v9h2v-3h2v3h2v-9a1.014 1.014 0 0 0 -.4-.8zm1 5.75h-2v-2h2z"/><path data-aos="svg-trick" d="m49 16.25-2.6 1.95a1.014 1.014 0 0 0 -.4.8v9h2v-3h2v3h2v-9a1.014 1.014 0 0 0 -.4-.8zm1 5.75h-2v-2h2z"/><path data-aos="svg-trick" d="m48 31.7 1 1.5 1-1.5v-1.7h-2z"/><path data-aos="svg-trick" d="m31 23.7 1 1.5 1-1.5v-1.7h-2z"/><path data-aos="svg-trick" d="m44 28v-2.76l-1.38 2.76z"/><path data-aos="svg-trick" d="m37 20h1.38l-1.38-2.76z"/><path data-aos="svg-trick" d="m27 20v-2.76l-1.38 2.76z"/><path data-aos="svg-trick" d="m14 31.7 1 1.5 1-1.5v-1.7h-2z"/><path data-aos="svg-trick" d="m4 4v44h10.3a2.989 2.989 0 0 1 1.06-2.6l4.69-3.91a4.989 4.989 0 0 1 4.95-4.49h14a4.989 4.989 0 0 1 4.95 4.49l4.69 3.91a2.989 2.989 0 0 1 1.06 2.6h10.3v-44zm48 2h2v2h-2zm-4 0h2v2h-2zm-42 1a1 1 0 0 1 1-1h4v2h-3v3h-2zm0 6h2v2h-2zm4 21h-2v-2h2zm6 6h-2v-2h2zm6-6h-2v-2h2zm1.85-4.47a1 1 0 0 1 -.85.47h-5v2a.967.967 0 0 1 -.17.55l-2 3a.99.99 0 0 1 -1.66 0l-2-3a.967.967 0 0 1 -.17-.55v-2h-5a1 1 0 0 1 -.89-1.45l3.89-7.79v-1.76a3.012 3.012 0 0 1 1.2-2.4l3.2-2.4a.99.99 0 0 1 1.2 0l3.2 2.4a3.012 3.012 0 0 1 1.2 2.4v1.76l3.89 7.79a1.007 1.007 0 0 1 -.04.98zm3.15-3.53h-2v-2h2zm6 6h-2v-2h2zm6-6h-2v-2h2zm-4-4v2a.967.967 0 0 1 -.17.55l-2 3a.99.99 0 0 1 -1.66 0l-2-3a.967.967 0 0 1 -.17-.55v-2h-5a1 1 0 0 1 -.89-1.45l3.89-7.79v-1.76a3.012 3.012 0 0 1 1.2-2.4l3.2-2.4a.99.99 0 0 1 1.2 0l3.2 2.4a3.012 3.012 0 0 1 1.2 2.4v1.76l3.89 7.79a1 1 0 0 1 -.89 1.45zm9 12h-2v-2h2zm6 6h-2v-2h2zm6-6h-2v-2h2zm1.85-4.47a1 1 0 0 1 -.85.47h-5v2a.967.967 0 0 1 -.17.55l-2 3a.99.99 0 0 1 -1.66 0l-2-3a.967.967 0 0 1 -.17-.55v-2h-5a1 1 0 0 1 -.89-1.45l3.89-7.79v-1.76a3.012 3.012 0 0 1 1.2-2.4l3.2-2.4a.99.99 0 0 1 1.2 0l3.2 2.4a3.012 3.012 0 0 1 1.2 2.4v1.76l3.89 7.79a1.007 1.007 0 0 1 -.04.98zm.15-21.53h-2v-2h2z"/><path data-aos="svg-trick" d="m36.18 47.34a2.99 2.99 0 0 1 5.11-2.12l.71.71v-3.93a3.009 3.009 0 0 0 -3-3h-14a3.009 3.009 0 0 0 -3 3v3.93l.7-.71a3.005 3.005 0 0 1 4.25 4.25l-1.81 1.8.55 1.65a3.012 3.012 0 0 0 2.31-2.92 1 1 0 0 1 1-1h6a1 1 0 0 1 1 1 3.013 3.013 0 0 0 .88 2.13 3.068 3.068 0 0 0 1.43.79l.55-1.65-1.81-1.8a3.011 3.011 0 0 1 -.87-2.13z"/><path data-aos="svg-trick" d="m23.29 50.29 2.24-2.24a.972.972 0 0 0 .29-.71.951.951 0 0 0 -.29-.7.99.99 0 0 0 -1.42 0l-2.4 2.41a1 1 0 0 1 -1.09.21.987.987 0 0 1 -.62-.92v-4.21l-3.36 2.8a1.02 1.02 0 0 0 -.32 1.05l1.64 5.75a.8.8 0 0 1 .04.27v6h6v-5.84l-.95-2.84a1.007 1.007 0 0 1 .24-1.03z"/><path data-aos="svg-trick" d="m54 28h1.38l-1.38-2.76z"/><path data-aos="svg-trick" d="m44 44.14v4.2a.987.987 0 0 1 -.62.92 1 1 0 0 1 -1.09-.21l-2.41-2.41a.987.987 0 0 0 -1.41 0 .951.951 0 0 0 -.29.7.972.972 0 0 0 .29.71l2.24 2.24a1.007 1.007 0 0 1 .24 1.03l-.95 2.84v5.84h6v-6a.8.8 0 0 1 .04-.27l1.64-5.75a1 1 0 0 0 -.32-1.04z"/><path data-aos="svg-trick" d="m15 16.25-2.6 1.95a1.014 1.014 0 0 0 -.4.8v9h2v-3h2v3h2v-9a1.014 1.014 0 0 0 -.4-.8zm1 5.75h-2v-2h2z"/></g></svg>
-            <div className="pricing-plans-card">
+            <div className="pricing-plans-card" data-aos="flip-up" data-aos-duration="700" data-aos-delay="400">
               <h3>Professional</h3>
               <p className="price-tag">2000$</p>
               <p>Do you wish your website looked as good as this? Then  <strong>hire me</strong>, I'm open to work!</p>
             </div>
           </div>
+        </div>
+      </section>
+      <section>
+        <h2 className="regular-title">Helping you</h2>
+        <div className="stars-container" id="particles-js">
+          <h2 className="stars-title-1">Connect</h2>
+          <h2 className="stars-title-2">Connect</h2>
         </div>
       </section>
     </div>

@@ -36,8 +36,13 @@
 
 .nav {
   /*you can style it with flexbox too! (instead of text-align:right;)*/
-  position: sticky;
+  position: fixed;
   height: 70px;
+  top: 0px;
+  
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+  transform: translateX(-50%);
+  width: 100vw;
   max-width: 1000px;
   margin: auto;
   z-index: 2;
