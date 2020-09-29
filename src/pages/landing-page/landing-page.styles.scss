@@ -118,20 +118,21 @@ section {
   
 }
 .stars-container {
+  overflow: hidden;
   position: relative;
   height: 20vw;
   width: 200%;
   left: 50%;
     transform: translateX(-50%);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  //background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
   .stars-title-1 {
     display: block;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    width: 100%;
-    font-size: 20vw;
+    width: 101%;
+    font-size: 18vw;
     font-family: $title-font;
     background-color: white;
     
@@ -144,13 +145,32 @@ section {
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
-    width: 100%;
-    font-size: 20vw;
+    width: 101%;
+    font-size: 18vw;
     font-family: $title-font;
     background-color: $navy;
     color: white;
     mix-blend-mode: multiply;
+    text-shadow: -1px 1px 0 #fff,
+              1px 1px 0 #fff,
+              1px -1px 0 #fff,
+             -1px -1px 0 #fff;
   }
+}
+.made-with {
+  margin-bottom: 6rem;
+  font-size: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .made-with-icon {
+    margin: 1rem 1rem;
+  }
+  #redux-logo {
+    height: 3rem;
+    width: auto;
+  }
+
 }
 
 @media only screen and (max-width: 700px) {
@@ -188,6 +208,14 @@ section {
         flex-wrap: wrap;
       }
     }
+  }
+  .stars-container {
+    width: 100% ;
+
+  }
+  .vanta-canvas {
+
+    height: 100% !important;
   }
 }
 
